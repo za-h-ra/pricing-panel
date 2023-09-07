@@ -134,7 +134,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to bottom, #95f9c3, #0b3866);
+  background-image: linear-gradient(to bottom, #95f9c3, #42047e);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,4 +214,38 @@ i {
 
 .pricing-features-items:last-child {
   border-bottom: 1px solid #8395a7;
+}
+
+.pricing-button {
+  border: none;
+  color: #0b3866;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 25px;
+  background-color: #95f9c3;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 200ms ease-in-out;
+  font-size: 12px;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: #80d9a9;
+}
+
+.pricing-button.is-featured {
+  background-color: #6f7bf7;
+  color: white;
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+  background-color: #5a63ca;
+  color: #fff;
+  border: none;
 }
