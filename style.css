@@ -216,10 +216,6 @@ i {
   margin: 0 25px;
 }
 
-.pricing-features-items:last-child {
-  border-bottom: 1px solid #8395a7;
-}
-
 .pricing-button {
   border: none;
   color: #0b3866;
@@ -227,7 +223,7 @@ i {
   display: inline-block;
   padding: 15px 35px;
   text-decoration: none;
-  margin: 25px;
+  margin-top: 25px;
   background-color: #95f9c3;
   font-weight: 600;
   letter-spacing: 1px;
@@ -252,4 +248,16 @@ i {
   background-color: #5a63ca;
   color: #fff;
   border: none;
+}
+
+@media (min-width: 900px) {
+  .panel {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .pricing-plan {
+    margin: 0 10px;
+    width: 100%;
+  }
 }
