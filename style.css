@@ -135,15 +135,94 @@ html {
 
 body {
   background-image: linear-gradient(to bottom, #95f9c3, #42047e);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
 i {
   font-size: 14px;
   color: #95f9c3;
+}
+
+.header-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  color: #08203e;
+  text-align: center;
+}
+
+.primary-heading {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* EXPERIMENTAL TOGGLE SWITCH STYLING */
+
+/* .pricing-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.switch-toggle {
+  background-color: #dcdde1;
+  border: 1px solid #dcdde1;
+  padding: 10px 30px;
+  border-radius: 50em;
+  position: relative;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  justify-content: flex-start;
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  transition-delay: 0.1s;
+  transition: color 0.3s ease;
+}
+
+input[type="radio"]:checked + label {
+  color: #fff;
+  text-decoration: none;
+}
+
+.switch {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  height: 30px;
+  width: 120px;
+  background-image: linear-gradient(to right, #95f9c3, #42047e);
+  border-radius: 50em;
+  transition: transform 0.3s;
+}
+
+input[type="radio"]:checked + label + .switch,
+input[type="radio"]:checked + label:nth-of-type(n) + .switch {
+  transform: translateX(130px);
+} */
+
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .panel {
   background-color: #08203e;
@@ -155,6 +234,7 @@ i {
   flex-direction: column;
   text-align: center;
   text-transform: uppercase;
+  box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 1);
 }
 
 .pricing-plan {
@@ -236,28 +316,35 @@ i {
   background-color: #80d9a9;
 }
 
-.pricing-button.is-featured {
-  background-color: #6f7bf7;
-  color: white;
-  border: none;
-  transition: all 200ms ease-in-out;
-}
-
-.pricing-button.is-featured:hover,
-.pricing-button.is-featured:focus {
-  background-color: #5a63ca;
-  color: #fff;
-  border: none;
-}
-
 @media (min-width: 900px) {
   .panel {
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 60px;
   }
 
   .pricing-plan {
     margin: 0 10px;
     width: 100%;
+  }
+
+  .pricing-plan.is-featured {
+    background-color: #42047e;
+    transform: translateY(-50px);
+  }
+
+  .pricing-plan:hover {
+    background-color: #42047e;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-50px);
+    cursor: pointer;
+  }
+
+  .pricing-button:hover,
+  .pricing-button:focus {
+    background-color: #6f7bf7;
+    color: white;
+    border: none;
+    transition: all 200ms ease-in-out;
   }
 }
